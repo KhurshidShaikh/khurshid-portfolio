@@ -86,11 +86,11 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2, duration: 0.8 }}
-                className="pt-6 flex gap-4"
+                className="pt-6 flex flex-row flex-wrap sm:flex-nowrap justify-center sm:justify-start gap-3"
               >
                 <a
                   href="#contact"
-                  className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-full transition-colors duration-300"
+                  className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm sm:text-base px-4 sm:px-8 py-3 rounded-full transition-colors duration-300 whitespace-nowrap"
                 >
                   Let&apos;s Connect
                 </a>
@@ -98,7 +98,7 @@ export default function Home() {
                   href="https://drive.google.com/file/d/181R15eef-N-Os-SO3TB5K7Cgdw28aVeq/view"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-blue-500 border border-blue-500 font-semibold px-8 py-3 rounded-full transition-colors duration-300"
+                  className="inline-block bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-blue-500 border border-blue-500 font-semibold text-sm sm:text-base px-4 sm:px-8 py-3 rounded-full transition-colors duration-300 whitespace-nowrap"
                 >
                   View Resume
                 </a>
