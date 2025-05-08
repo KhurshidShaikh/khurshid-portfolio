@@ -6,7 +6,6 @@ import {technologies,projects,contact} from "../constants/index.js"
 import { github } from "../assets/tech";
 import Image from "next/image";
 import { useEffect, useState } from 'react';
-import Footer from '@/components/Footer';
 import { useTheme } from './ThemeProvider';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -51,7 +50,7 @@ export default function Home() {
               className="space-y-6"
             >
               <h1 className="text-4xl md:text-6xl font-bold leading-tight dark:text-white">
-                Greetings, I'm{" "}
+                Greetings, I&apos;m{" "}
                 <span className="text-blue-500">Khurshid</span>
               </h1>
               
@@ -80,7 +79,7 @@ export default function Home() {
               >
                 I craft reliable, scalable, and user-centric digital solutions that bring ideas to life. 
                 With a strong focus on clean architecture and impactful user experience, 
-                I'm driven by the passion to build meaningful products that solve real-world problems.
+                I&apos;m driven by the passion to build meaningful products that solve real-world problems.
               </motion.p>
 
               <motion.div
@@ -93,7 +92,7 @@ export default function Home() {
                   href="#contact"
                   className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-full transition-colors duration-300"
                 >
-                  Let's Connect
+                  Let&apos;s Connect
                 </a>
                 <a
                   href="https://drive.google.com/file/d/181R15eef-N-Os-SO3TB5K7Cgdw28aVeq/view"
@@ -155,10 +154,10 @@ export default function Home() {
               className="space-y-4 text-lg leading-relaxed text-gray-800 dark:text-gray-300"
             >
               <p>
-                I'm a passionate Full-Stack Web and Mobile App Developer who enjoys turning ideas into digital experiences. With a solid foundation in both frontend and backend development, I love building apps that are fast, functional, and user-friendly.
+                I&apos;m a passionate Full-Stack Web and Mobile App Developer who enjoys turning ideas into digital experiences. With a solid foundation in both frontend and backend development, I love building apps that are fast, functional, and user-friendly.
               </p>
               <p>
-                Over the last year, I've worked on several real-world projects ranging from AI-powered mobile apps to ML-integrated platforms. Whether it's designing responsive interfaces or implementing complex backend logic, I thrive on solving problems through clean, scalable code.
+                Over the last year, I&apos;ve worked on several real-world projects ranging from AI-powered mobile apps to ML-integrated platforms. Whether it&apos;s designing responsive interfaces or implementing complex backend logic, I thrive on solving problems through clean, scalable code.
               </p>
               <p>
                 Currently exploring new technologies, collaborating on impactful products, and open to exciting opportunities in the tech space.
@@ -344,7 +343,7 @@ export default function Home() {
               className="text-center mb-12"
             >
               <p className="text-xl text-gray-800 dark:text-gray-300 max-w-2xl mx-auto">
-                Get in touch, let's talk. Shoot a message and I'll get back to you as soon as I can.
+                Get in touch, let&apos;s talk. Shoot a message and I&apos;ll get back to you as soon as I can.
               </p>
             </motion.div>
 
