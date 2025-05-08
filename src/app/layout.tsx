@@ -18,7 +18,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Khurshid Shaikh - Portfolio",
   description: "Full-Stack Web & Mobile App Developer",
-
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+    ]
+  }
 };
 
 export default function RootLayout({
@@ -31,6 +35,8 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f172a" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-gray-900 dark:text-white transition-colors duration-200`}

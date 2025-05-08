@@ -90,7 +90,7 @@ export default function Home() {
               >
                 <a
                   href="#contact"
-                  className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm sm:text-base px-4 sm:px-8 py-3 rounded-full transition-colors duration-300 whitespace-nowrap"
+                  className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold text-xs sm:text-sm md:text-base px-3 sm:px-4 md:px-8 py-2 sm:py-3 rounded-full transition-colors duration-300 whitespace-nowrap"
                 >
                   Let&apos;s Connect
                 </a>
@@ -98,7 +98,7 @@ export default function Home() {
                   href="https://drive.google.com/file/d/181R15eef-N-Os-SO3TB5K7Cgdw28aVeq/view"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-blue-500 border border-blue-500 font-semibold text-sm sm:text-base px-4 sm:px-8 py-3 rounded-full transition-colors duration-300 whitespace-nowrap"
+                  className="inline-block bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-blue-500 border border-blue-500 font-semibold text-xs sm:text-sm md:text-base px-3 sm:px-4 md:px-8 py-2 sm:py-3 rounded-full transition-colors duration-300 whitespace-nowrap"
                 >
                   View Resume
                 </a>
