@@ -95,7 +95,7 @@ export default function Home() {
                   Let&apos;s Connect
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/181R15eef-N-Os-SO3TB5K7Cgdw28aVeq/view"
+                  href="https://drive.google.com/file/d/1VXv_HCxaZNW9Q-IV867PN6roybBzs1Wv/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-blue-500 border border-blue-500 font-semibold text-sm sm:text-sm md:text-base px-5 sm:px-6 md:px-8 py-3 sm:py-3 rounded-full transition-colors duration-300 whitespace-nowrap"
