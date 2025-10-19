@@ -33,6 +33,10 @@ const Navbar = () => {
               About
             </Link>
           
+            <Link href="#experience" className="text-gray-900 dark:text-gray-100 text-xl">
+              Experience
+            </Link>
+
             <Link href="#projects" className="text-gray-900 dark:text-gray-100 text-xl">
               Projects
             </Link>
@@ -98,6 +102,10 @@ const Navbar = () => {
               About
             </Link>
            
+            <Link href="#experience" className="text-gray-900 dark:text-gray-100 text-[20px]">
+              Experience
+            </Link>
+
             <Link href="#projects" className="text-gray-900 dark:text-gray-100 text-[20px]">
               Projects
             </Link>

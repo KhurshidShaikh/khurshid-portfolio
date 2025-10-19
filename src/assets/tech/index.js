@@ -27,6 +27,7 @@ import simplifaiicon from "./simplifaiicon.png"
 import xlogo from "./xlogo.png";
 import gmail from "./gmail.png";
 import linkedin from "./linkedin.png"
+import alumnibridge from "./alumnibridge.png"
 
 
 export {
@@ -58,5 +59,6 @@ export {
     simplifaiicon,
     linkedin,
     xlogo,
-    gmail
+    gmail,
+    alumnibridge
 }; 

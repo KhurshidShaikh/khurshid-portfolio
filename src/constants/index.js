@@ -24,7 +24,9 @@ import {javascript,
     simplifaiicon,
     xlogo,
     gmail,
-    linkedin
+    linkedin,
+    docker,
+    alumnibridge
 } from "../assets/tech"
 
 export const technologies = [
@@ -87,6 +89,9 @@ export const technologies = [
     },
     {
         icon: vscode
+    },
+    {
+        icon:docker
     }
 ]
 
@@ -98,6 +103,12 @@ export const projects=[
     description:"An AI-powered full-stack real estate platform enabling users to list, buy, and rent properties. Features include price prediction using ML, property recommendations, JWT-based auth, and real-time chat with Socket.io",
     image:proptech,
     source_code:"https://github.com/KhurshidShaikh/proptech-v2"
+},
+{
+    name:"Alumni Bridge",
+    description:"A comprehensive alumni networking platform built for college communities, featuring connections directory, job board, Events ,news feed, and alumni stories.",
+    image:alumnibridge,
+    source_code:"https://github.com/KhurshidShaikh/Alumni-Bridge"
 },
 {
     name:"SimplifAI",
