@@ -26,7 +26,8 @@ import {javascript,
     gmail,
     linkedin,
     docker,
-    alumnibridge
+    alumnibridge,
+    Queuecare
 } from "../assets/tech"
 
 export const technologies = [
@@ -97,6 +98,12 @@ export const technologies = [
 
 
 export const projects=[
+    {
+    name:"QueueCare",
+    description:"QueueCare is a WhatsApp-based queue management system for local clinics that replaces manual paper-based token registers. Patients join the queue via WhatsApp, receive real-time updates, and wait remotely, while clinics stay fully in control through a simple dashboard.",
+    image:Queuecare,
+    source_code:"https://github.com/KhurshidShaikh/QueueCare-Frontend"
+},
 
 {
     name:"PropTech",

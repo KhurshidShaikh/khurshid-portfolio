@@ -28,7 +28,7 @@ import xlogo from "./xlogo.png";
 import gmail from "./gmail.png";
 import linkedin from "./linkedin.png"
 import alumnibridge from "./alumnibridge.png"
-
+import Queuecare from "./Screenshot 2025-12-25 231729.png"
 
 export {
     javascript,
@@ -60,5 +60,6 @@ export {
     linkedin,
     xlogo,
     gmail,
-    alumnibridge
+    alumnibridge,
+    Queuecare
 }; 
