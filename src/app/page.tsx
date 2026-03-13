@@ -264,22 +264,41 @@ export default function Home() {
                   <div className="p-6 flex flex-col h-full">
                     <div className="flex justify-between items-start mb-4">
                       <h3 className="text-xl font-bold text-gray-900 dark:text-white">{project.name}</h3>
-                      <motion.a 
-                        href={project.source_code} 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.2, rotate: 10 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-                      >
-                        <Image 
-                          src={github} 
-                          alt="GitHub" 
-                          width={24} 
-                          height={24} 
-                          className="object-contain" 
-                        />
-                      </motion.a>
+                      <div className="flex items-center gap-3">
+                        {project.live_link && (
+                          <motion.a
+                            href={project.live_link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center gap-1.5 bg-blue-500 hover:bg-blue-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full transition-colors duration-200"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                              <polyline points="15 3 21 3 21 9" />
+                              <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                            Live
+                          </motion.a>
+                        )}
+                        <motion.a 
+                          href={project.source_code} 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.2, rotate: 10 }}
+                          whileTap={{ scale: 0.9 }}
+                          className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                        >
+                          <Image 
+                            src={github} 
+                            alt="GitHub" 
+                            width={24} 
+                            height={24} 
+                            className="object-contain" 
+                          />
+                        </motion.a>
+                      </div>
                     </div>
                     
                     <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
@@ -343,44 +362,87 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-10"
             >
               <p className="text-xl text-gray-800 dark:text-gray-300 max-w-2xl mx-auto">
                 Get in touch, let&apos;s talk. Shoot a message and I&apos;ll get back to you as soon as I can.
               </p>
             </motion.div>
 
+            {/* Email card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              viewport={{ once: true }}
+              className="max-w-lg mx-auto mb-10"
+            >
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 p-8 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-500">
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                </div>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-1 font-medium uppercase tracking-wider">Email me at</p>
+                <a 
+                  href="mailto:khurshidsk7304@gmail.com" 
+                  className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white hover:text-blue-500 dark:hover:text-blue-400 transition-colors break-all"
+                >
+                  khurshidsk7304@gmail.com
+                </a>
+                <div className="mt-5">
+                  <motion.a
+                    href="mailto:khurshidsk7304@gmail.com"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-full transition-colors duration-200"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
+                      <path d="m21.854 2.147-10.94 10.939" />
+                    </svg>
+                    Send a Message
+                  </motion.a>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Social links */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
+              transition={{ delay: 0.7, duration: 0.8 }}
               viewport={{ once: true }}
-              className="flex justify-center gap-8 mt-8"
+              className="text-center"
             >
-              {contact.map((item, index) => (
-                <motion.a
-                  key={index}
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 * index, duration: 0.5 }}
-                  whileHover={{ y: -8, scale: 1.1 }}
-                  className="flex flex-col items-center"
-                >
-                  <div className="w-20 h-20 relative flex items-center justify-center bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-lg transition-all p-4 border-2 border-gray-100 dark:border-gray-700">
-                    <Image 
-                      src={item.icon} 
-                      alt="Contact icon"
-                      width={48}
-                      height={48}
-                      className="object-contain"
-                    />
-                  </div>
-                </motion.a>
-              ))}
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 font-medium uppercase tracking-wider">Or find me on</p>
+              <div className="flex justify-center gap-5">
+                {contact.map((item, index) => (
+                  <motion.a
+                    key={index}
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.8 + 0.15 * index, duration: 0.5 }}
+                    whileHover={{ y: -6, scale: 1.1 }}
+                    className="flex flex-col items-center"
+                  >
+                    <div className="w-20 h-20 relative flex items-center justify-center bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-lg transition-all p-4 border border-gray-200 dark:border-gray-700">
+                      <Image 
+                        src={item.icon} 
+                        alt="Contact icon"
+                        width={48}
+                        height={48}
+                        className="object-contain"
+                      />
+                    </div>
+                  </motion.a>
+                ))}
+              </div>
             </motion.div>
           </div>
         </section>

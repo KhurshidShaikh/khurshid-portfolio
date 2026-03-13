@@ -102,20 +102,23 @@ export const projects=[
     name:"QueueCare",
     description:"QueueCare is a WhatsApp-based queue management system for local clinics that replaces manual paper-based token registers. Patients join the queue via WhatsApp, receive real-time updates, and wait remotely, while clinics stay fully in control through a simple dashboard.",
     image:Queuecare,
-    source_code:"https://github.com/KhurshidShaikh/QueueCare-Frontend"
+    source_code:"https://github.com/KhurshidShaikh/QueueCare-Frontend",
+    live_link:"https://queuecare.vercel.app"
 },
 
 {
     name:"PropTech",
     description:"An AI-powered full-stack real estate platform enabling users to list, buy, and rent properties. Features include price prediction using ML, property recommendations, JWT-based auth, and real-time chat with Socket.io",
     image:proptech,
-    source_code:"https://github.com/KhurshidShaikh/proptech-v2"
+    source_code:"https://github.com/KhurshidShaikh/proptech-v2",
+    live_link:"https://proptechv2.vercel.app"
 },
 {
     name:"Alumni Bridge",
     description:"A comprehensive alumni networking platform built for college communities, featuring connections directory, job board, Events ,news feed, and alumni stories.",
     image:alumnibridge,
-    source_code:"https://github.com/KhurshidShaikh/Alumni-Bridge"
+    source_code:"https://github.com/KhurshidShaikh/Alumni-Bridge",
+    live_link:"https://alumnibridge.giize.com"
 },
 {
     name:"SimplifAI",
@@ -134,7 +137,8 @@ export const projects=[
     name:"AnonyMsg",
     description:"A secure, anonymous messaging platform where users receive feedback via shareable profile links. Built with Next.js, MongoDB, NextAuth, and includes AI-suggested responses for message inspiration.",
     image:anonymsg,
-    source_code:"https://github.com/KhurshidShaikh/anonymsg"
+    source_code:"https://github.com/KhurshidShaikh/anonymsg",
+    live_link:"https://anonymssg.vercel.app"
 
 }
 

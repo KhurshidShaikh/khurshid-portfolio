@@ -21,6 +21,18 @@ const experiences: Experience[] = [
       "Engineered dynamic, responsive UI components and integrated RESTful APIs to enable smooth interaction and efficient data flow between frontend and backend systems.",
       "Collaborated with design and QA teams to optimize application performance, accessibility, and maintainability before deployment."
     ]
+  },
+  {
+    role: "Python Developer Intern",
+    company: "Ignitech.in",
+    location: "On-site",
+    period: "Jun 2022 – Aug 2022",
+    responsibilities: [
+      "Built a Python-based desktop application integrated with SQL for data storage and management.",
+      "Assisted in debugging, testing, and optimizing Python scripts to improve code quality and performance.",
+      "Gained hands-on experience with database design, CRUD operations, and application logic in a real-world environment.",
+      "Collaborated with the development team to identify and resolve software defects, contributing to a more stable codebase."
+    ]
   }
 ];
 
