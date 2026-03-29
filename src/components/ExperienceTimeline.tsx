@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { SpotlightCard } from './ui/SpotlightCard';
 
 interface Experience {
   role: string;
@@ -37,64 +37,49 @@ const experiences: Experience[] = [
 ];
 
 export default function ExperienceTimeline() {
-  const [isVisible, setIsVisible] = useState(false);
-
   return (
-    <section id="experience" className="container mx-auto px-4 py-16">
+    <section id="experience" className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
+        {/* Section Heading */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true, amount: 0.8 }}
-          onViewportEnter={() => setIsVisible(true)}
-          className="mb-12 text-center"
+          viewport={{ once: true }}
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold inline-block overflow-hidden dark:text-white">
-            <div className="overflow-hidden">
-              {"Experience".split('').map((char, index) => (
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                  transition={{ 
-                    duration: 0.5, 
-                    delay: 0.05 * index,
-                    ease: "easeOut" 
-                  }}
-                  className="inline-block"
-                >
-                  {char === ' ' ? '\u00A0' : char}
-                </motion.span>
-              ))}
-            </div>
-            <motion.div
-              initial={{ width: "0%" }}
-              whileInView={{ width: "100%" }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-              viewport={{ once: true }}
-              className="h-2 bg-blue-500 mt-2"
-              style={{ borderRadius: "4px" }}
-            ></motion.div>
+          <p className="text-xs uppercase tracking-[0.2em] text-violet-400 mb-3 font-medium">
+            Career path
+          </p>
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+            Experience<span className="gradient-text">.</span>
           </h2>
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "3rem" }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="h-1 bg-gradient-to-r from-violet-500 to-indigo-500 mx-auto mt-4 rounded-full"
+          />
         </motion.div>
 
+        {/* Timeline */}
         <div className="relative">
           {/* Timeline line */}
           <motion.div
             initial={{ height: 0 }}
             whileInView={{ height: "100%" }}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 1.5, delay: 0.3 }}
             viewport={{ once: true }}
-            className="absolute left-8 md:left-1/2 top-0 w-0.5 bg-gradient-to-b from-blue-500 to-blue-300 dark:from-blue-400 dark:to-blue-600 transform md:-translate-x-1/2"
+            className="absolute left-4 md:left-1/2 top-0 w-px bg-gradient-to-b from-violet-500/80 via-indigo-500/40 to-transparent md:-translate-x-px"
           />
 
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 * index }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 * index }}
               viewport={{ once: true }}
               className={`relative mb-12 md:mb-16 flex flex-col md:flex-row items-start md:items-center ${
                 index % 2 === 0 ? 'md:flex-row-reverse' : ''
@@ -104,29 +89,28 @@ export default function ExperienceTimeline() {
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 + 0.3 * index }}
+                transition={{ duration: 0.4, delay: 0.4 + 0.2 * index }}
                 viewport={{ once: true }}
-                className="absolute left-8 md:left-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-white dark:border-gray-900 transform md:-translate-x-1/2 z-10"
-              />
+                className="absolute left-4 md:left-1/2 w-3 h-3 rounded-full bg-violet-500 md:-translate-x-1.5 z-10 shadow-[0_0_10px_rgba(139,92,246,0.5)]"
+              >
+                {/* Pulse ring */}
+                <div className="absolute inset-0 rounded-full bg-violet-500/30 animate-ping" />
+              </motion.div>
 
               {/* Content card */}
-              <div className={`ml-16 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-                <motion.div
-                  whileHover={{ y: -5, scale: 1.02 }}
-                  className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-700"
-                >
+              <div className={`ml-10 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:pr-10' : 'md:pl-10'}`}>
+                <SpotlightCard className="!p-6">
                   <div className="mb-4">
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                    <h3 className="text-xl font-bold text-foreground mb-2">
                       {exp.role}
                     </h3>
-                    <div className="flex flex-wrap items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                      <span className="font-semibold text-blue-500 dark:text-blue-400">
+                    <div className="flex flex-wrap items-center gap-2 text-sm">
+                      <span className="font-semibold text-violet-400">
                         {exp.company}
                       </span>
-                      <span>•</span>
-                      <span>{exp.location}</span>
-                      <span>•</span>
-                      <span className="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full">
+                      <span className="text-muted-foreground">•</span>
+                      <span className="text-muted-foreground">{exp.location}</span>
+                      <span className="text-xs px-2.5 py-0.5 rounded-full bg-violet-500/10 text-violet-400 border border-violet-500/20 font-medium">
                         {exp.period}
                       </span>
                     </div>
@@ -136,21 +120,21 @@ export default function ExperienceTimeline() {
                     {exp.responsibilities.map((responsibility, idx) => (
                       <motion.li
                         key={idx}
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={{ opacity: 0, x: -15 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.4, delay: 0.8 + 0.1 * idx }}
+                        transition={{ duration: 0.4, delay: 0.6 + 0.1 * idx }}
                         viewport={{ once: true }}
-                        className="flex items-start text-gray-700 dark:text-gray-300"
+                        className="flex items-start text-muted-foreground"
                       >
-                        <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0" />
+                        <span className="inline-block w-1.5 h-1.5 bg-violet-500/60 rounded-full mt-2 mr-3 flex-shrink-0" />
                         <span className="text-sm leading-relaxed">{responsibility}</span>
                       </motion.li>
                     ))}
                   </ul>
-                </motion.div>
+                </SpotlightCard>
               </div>
 
-              {/* Spacer for alternating layout on desktop */}
+              {/* Spacer */}
               <div className="hidden md:block md:w-5/12" />
             </motion.div>
           ))}

@@ -1,28 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "./ThemeProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Khurshid Shaikh - Portfolio",
-  description: "Full-Stack Web & Mobile App Developer",
+  title: "Khurshid Shaikh — Full-Stack Developer",
+  description:
+    "Full-Stack Web & Mobile App Developer crafting reliable, scalable, and user-centric digital solutions.",
   icons: {
-    icon: [
-      { url: '/favicon.ico' },
-    ]
-  }
+    icon: [{ url: "/favicon.ico" }],
+  },
 };
 
 export default function RootLayout({
@@ -33,22 +32,20 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#0a0a1a" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-gray-900 dark:text-white transition-colors duration-200`}
+        className={`${inter.variable} ${jetbrainsMono.variable} font-[family-name:var(--font-inter)] antialiased transition-colors duration-200`}
       >
         <ThemeProvider>
-          <Navbar/>
+          <Navbar />
           {children}
-          <Footer/>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
   );
 }
-
-
