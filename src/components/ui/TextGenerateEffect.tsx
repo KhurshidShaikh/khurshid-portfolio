@@ -25,7 +25,7 @@ export const TextGenerateEffect = ({
       opacity: 1,
       filter: "blur(0px)",
       y: 0,
-      transition: { duration: 0.4, ease: "easeOut" },
+      transition: { duration: 0.4, ease: "easeOut" as const },
     },
   };
 
