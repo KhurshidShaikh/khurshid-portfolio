@@ -24,7 +24,7 @@ export const MovingBorderButton = ({
       {...otherProps}
     >
       {/* Animated gradient border */}
-      <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#8b5cf6_0%,#06b6d4_50%,#8b5cf6_100%)]" />
+      <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#d4a853_0%,#f0d078_50%,#d4a853_100%)]" />
       {/* Inner content */}
       <span
         className={cn(

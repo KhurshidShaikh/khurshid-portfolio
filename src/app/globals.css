@@ -4,23 +4,23 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 262 83% 58%;
-    --accent-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
+    --background: 40 20% 97%;
+    --foreground: 30 10% 12%;
+    --muted: 40 15% 92%;
+    --muted-foreground: 35 8% 45%;
+    --accent: 40 65% 50%;
+    --accent-foreground: 40 10% 98%;
+    --border: 35 12% 85%;
   }
 
   .dark {
-    --background: 224 71% 4%;
-    --foreground: 213 31% 91%;
-    --muted: 223 47% 11%;
-    --muted-foreground: 215.4 16.3% 56.9%;
-    --accent: 263 70% 50%;
-    --accent-foreground: 210 40% 98%;
-    --border: 216 34% 17%;
+    --background: 30 15% 5%;
+    --foreground: 40 20% 90%;
+    --muted: 30 12% 10%;
+    --muted-foreground: 35 10% 50%;
+    --accent: 40 65% 55%;
+    --accent-foreground: 30 10% 5%;
+    --border: 35 10% 18%;
   }
 }
 
@@ -54,7 +54,7 @@ body {
 
 /* ---- Utility: gradient text ---- */
 .gradient-text {
-  background: linear-gradient(135deg, #a78bfa 0%, #818cf8 25%, #6366f1 50%, #8b5cf6 75%, #a78bfa 100%);
+  background: linear-gradient(135deg, #d4a853 0%, #f0d078 25%, #c9952e 50%, #e8c87a 75%, #d4a853 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;

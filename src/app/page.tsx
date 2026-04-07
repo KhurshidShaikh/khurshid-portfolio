@@ -97,7 +97,7 @@ export default function Home() {
                   href="https://drive.google.com/file/d/1mfGrvP36obpdQdjwYJ2w2E0vWFiyRIp4/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 h-12 px-6 rounded-full border-2 border-violet-500/60 text-sm font-medium text-foreground hover:border-violet-400 hover:bg-violet-500/10 hover:shadow-[0_0_20px_rgba(139,92,246,0.15)] transition-all duration-300"
+                  className="inline-flex items-center gap-2 h-12 px-6 rounded-full border-2 border-amber-500/60 text-sm font-medium text-foreground hover:border-amber-400 hover:bg-amber-500/10 hover:shadow-[0_0_20px_rgba(212,168,83,0.2)] transition-all duration-300"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
@@ -130,10 +130,10 @@ export default function Home() {
                     I&apos;m a <span className="text-foreground font-medium">Full-Stack Web and Mobile App Developer</span> with hands-on experience building and shipping real products. I&apos;ve developed production-grade web and mobile applications, integrating RESTful APIs, optimizing performance, and collaborating across design and QA teams.
                   </p>
                   <p>
-                    I&apos;ve built <span className="text-violet-400">QueueCare</span> — a WhatsApp-based queue management system used by clinics, <span className="text-violet-400">PropTech</span> — an AI-powered real estate platform with ML price prediction and real-time chat, and <span className="text-violet-400">SimplifAI</span> — a mobile app using OCR and Gemini AI to translate complex documents into regional languages.
+                    I&apos;ve built <span className="text-amber-500">QueueCare</span> — a WhatsApp-based queue management system for clinics, <span className="text-amber-500">PropTech</span> — an AI-powered real estate platform with ML price prediction and real-time chat, and <span className="text-amber-500">SimplifAI</span> — a mobile app using OCR and Gemini AI to translate complex documents into regional languages.
                   </p>
                   <p>
-                    My stack spans <span className="text-foreground font-medium">React, Next.js, Node.js, React Native, Python, MongoDB, and Firebase</span> — and I&apos;m always picking up whatever a project demands. I care about writing clean, maintainable code that actually ships and solves real problems.
+                    My stack spans <span className="text-foreground font-medium">React, Next.js, Node.js, React Native, Python, MySQL ,MongoDB, and Firebase</span> — and I&apos;m always picking up whatever a project demands. I care about writing clean, maintainable code that actually ships and solves real problems.
                   </p>
                 </div>
               </SpotlightCard>
@@ -202,8 +202,8 @@ export default function Home() {
             >
               <GlowingStarsCard className="text-center">
                 {/* Email icon */}
-                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-violet-500/20 to-indigo-500/20 border border-violet-500/20 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-violet-400">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-amber-500/20 to-yellow-500/20 border border-amber-500/20 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-amber-500">
                     <rect width="20" height="16" x="2" y="4" rx="2" />
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                   </svg>
@@ -214,7 +214,7 @@ export default function Home() {
                 </p>
                 <a
                   href="mailto:khurshidsk7304@gmail.com"
-                  className="text-lg md:text-xl font-semibold text-foreground hover:text-violet-400 transition-colors break-all"
+                  className="text-lg md:text-xl font-semibold text-foreground hover:text-amber-500 transition-colors break-all"
                 >
                   khurshidsk7304@gmail.com
                 </a>
@@ -234,7 +234,7 @@ export default function Home() {
                   <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium">
                     Or find me on
                   </p>
-                  <div className="flex justify-center gap-3">
+                  <div className="flex justify-center gap-4">
                     {contact.map((item, index) => (
                       <motion.a
                         key={index}
@@ -243,15 +243,25 @@ export default function Home() {
                         rel="noopener noreferrer"
                         whileHover={{ y: -4, scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="w-12 h-12 rounded-xl bg-muted/30 border border-border/50 flex items-center justify-center hover:border-violet-500/50 hover:shadow-[0_0_15px_hsl(263_70%_50%/0.15)] transition-all duration-300"
+                        className="group flex flex-col items-center gap-2 cursor-pointer"
                       >
-                        <Image
-                          src={item.icon}
-                          alt="Social"
-                          width={24}
-                          height={24}
-                          className="object-contain"
-                        />
+                        <div className="relative w-14 h-14 rounded-xl bg-muted/30 border border-border/50 flex items-center justify-center group-hover:border-amber-500/50 group-hover:shadow-[0_0_20px_rgba(212,168,83,0.2)] group-hover:bg-amber-500/5 transition-all duration-300">
+                          <Image
+                            src={item.icon}
+                            alt={item.name}
+                            width={46}
+                            height={46}
+                            className="object-contain"
+                          />
+                          {/* External link indicator */}
+                          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="absolute top-1.5 right-1.5 text-amber-500 opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+                            <path d="M7 17L17 7" />
+                            <path d="M7 7h10v10" />
+                          </svg>
+                        </div>
+                        <span className="text-xs font-medium text-muted-foreground group-hover:text-amber-500 transition-colors">
+                          {item.name}
+                        </span>
                       </motion.a>
                     ))}
                   </div>
@@ -269,7 +279,7 @@ export default function Home() {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.5 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-10 h-10 rounded-full bg-muted/50 backdrop-blur-sm border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-violet-500/50 transition-all z-50"
+          className="fixed bottom-8 right-8 w-10 h-10 rounded-full bg-muted/50 backdrop-blur-sm border border-border/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-amber-500/50 transition-all z-50"
           whileHover={{ y: -3 }}
           whileTap={{ scale: 0.9 }}
         >
@@ -293,7 +303,7 @@ function SectionHeading({ title, subtitle }: { title: string; subtitle?: string 
       className="text-center"
     >
       {subtitle && (
-        <p className="text-xs uppercase tracking-[0.2em] text-violet-400 mb-3 font-medium">
+        <p className="text-xs uppercase tracking-[0.2em] text-amber-500 mb-3 font-medium">
           {subtitle}
         </p>
       )}
@@ -306,7 +316,7 @@ function SectionHeading({ title, subtitle }: { title: string; subtitle?: string 
         whileInView={{ width: "3rem" }}
         transition={{ delay: 0.3, duration: 0.6 }}
         viewport={{ once: true }}
-        className="h-1 bg-gradient-to-r from-violet-500 to-indigo-500 mx-auto mt-4 rounded-full"
+        className="h-1 bg-gradient-to-r from-amber-500 to-yellow-600 mx-auto mt-4 rounded-full"
       />
     </motion.div>
   );

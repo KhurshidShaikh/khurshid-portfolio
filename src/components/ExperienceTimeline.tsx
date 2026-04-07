@@ -15,7 +15,7 @@ const experiences: Experience[] = [
     role: "Full Stack Developer",
     company: "Virelity",
     location: "Hybrid",
-    period: "Jun 2025 - Aug 2025",
+    period: "Jun 2025 - Nov 2025",
     responsibilities: [
       "Developed and maintained real-world, production-grade web and mobile applications for diverse client projects, ensuring robust performance, scalability, and user experience.",
       "Engineered dynamic, responsive UI components and integrated RESTful APIs to enable smooth interaction and efficient data flow between frontend and backend systems.",
@@ -48,7 +48,7 @@ export default function ExperienceTimeline() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-xs uppercase tracking-[0.2em] text-violet-400 mb-3 font-medium">
+          <p className="text-xs uppercase tracking-[0.2em] text-amber-500 mb-3 font-medium">
             Career path
           </p>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground">
@@ -59,7 +59,7 @@ export default function ExperienceTimeline() {
             whileInView={{ width: "3rem" }}
             transition={{ delay: 0.3, duration: 0.6 }}
             viewport={{ once: true }}
-            className="h-1 bg-gradient-to-r from-violet-500 to-indigo-500 mx-auto mt-4 rounded-full"
+            className="h-1 bg-gradient-to-r from-amber-500 to-yellow-600 mx-auto mt-4 rounded-full"
           />
         </motion.div>
 
@@ -71,7 +71,7 @@ export default function ExperienceTimeline() {
             whileInView={{ height: "100%" }}
             transition={{ duration: 1.5, delay: 0.3 }}
             viewport={{ once: true }}
-            className="absolute left-4 md:left-1/2 top-0 w-px bg-gradient-to-b from-violet-500/80 via-indigo-500/40 to-transparent md:-translate-x-px"
+            className="absolute left-4 md:left-1/2 top-0 w-px bg-gradient-to-b from-amber-500/80 via-yellow-600/40 to-transparent md:-translate-x-px"
           />
 
           {experiences.map((exp, index) => (
@@ -91,10 +91,10 @@ export default function ExperienceTimeline() {
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.4 + 0.2 * index }}
                 viewport={{ once: true }}
-                className="absolute left-4 md:left-1/2 w-3 h-3 rounded-full bg-violet-500 md:-translate-x-1.5 z-10 shadow-[0_0_10px_rgba(139,92,246,0.5)]"
+                className="absolute left-4 md:left-1/2 w-3 h-3 rounded-full bg-amber-500 md:-translate-x-1.5 z-10 shadow-[0_0_10px_rgba(212,168,83,0.5)]"
               >
                 {/* Pulse ring */}
-                <div className="absolute inset-0 rounded-full bg-violet-500/30 animate-ping" />
+                <div className="absolute inset-0 rounded-full bg-amber-500/30 animate-ping" />
               </motion.div>
 
               {/* Content card */}
@@ -105,12 +105,12 @@ export default function ExperienceTimeline() {
                       {exp.role}
                     </h3>
                     <div className="flex flex-wrap items-center gap-2 text-sm">
-                      <span className="font-semibold text-violet-400">
+                      <span className="font-semibold text-amber-500">
                         {exp.company}
                       </span>
                       <span className="text-muted-foreground">•</span>
                       <span className="text-muted-foreground">{exp.location}</span>
-                      <span className="text-xs px-2.5 py-0.5 rounded-full bg-violet-500/10 text-violet-400 border border-violet-500/20 font-medium">
+                      <span className="text-xs px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/20 font-medium">
                         {exp.period}
                       </span>
                     </div>
@@ -126,7 +126,7 @@ export default function ExperienceTimeline() {
                         viewport={{ once: true }}
                         className="flex items-start text-muted-foreground"
                       >
-                        <span className="inline-block w-1.5 h-1.5 bg-violet-500/60 rounded-full mt-2 mr-3 flex-shrink-0" />
+                        <span className="inline-block w-1.5 h-1.5 bg-amber-500/60 rounded-full mt-2 mr-3 flex-shrink-0" />
                         <span className="text-sm leading-relaxed">{responsibility}</span>
                       </motion.li>
                     ))}

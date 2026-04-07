@@ -47,8 +47,8 @@ export const BackgroundBeams = ({ className }: { className?: string }) => {
                 x2="100%"
                 y2="100%"
               >
-                <stop stopColor="#8b5cf6" stopOpacity="0" offset="0%" />
-                <stop stopColor="#8b5cf6" offset="50%">
+                <stop stopColor="#d4a853" stopOpacity="0" offset="0%" />
+                <stop stopColor="#d4a853" offset="50%">
                   <animate
                     attributeName="offset"
                     values="0;1;0"
@@ -56,7 +56,7 @@ export const BackgroundBeams = ({ className }: { className?: string }) => {
                     repeatCount="indefinite"
                   />
                 </stop>
-                <stop stopColor="#8b5cf6" stopOpacity="0" offset="100%" />
+                <stop stopColor="#d4a853" stopOpacity="0" offset="100%" />
               </linearGradient>
             </defs>
           </React.Fragment>

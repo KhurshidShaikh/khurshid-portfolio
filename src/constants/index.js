@@ -110,14 +110,17 @@ export const projects=[
 export const contact=[
     {
         icon :gmail,
-        link:"mailto:khurshidsk7304@gmail.com"
+        link:"mailto:khurshidsk7304@gmail.com",
+        name:"Gmail"
     },
     {
         icon:xlogo,
-        link:"https://x.com/__khurshid__7"
+        link:"https://x.com/__khurshid__7",
+        name:"X"
     },
     {
         icon:linkedin,
-        link:"https://www.linkedin.com/in/khurshid-shaikh-41b348281/"
+        link:"https://www.linkedin.com/in/khurshidshaikh",
+        name:"LinkedIn"
     }
 ]

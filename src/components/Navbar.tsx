@@ -45,7 +45,7 @@ const Navbar = () => {
               height={36}
               className="rounded-lg object-cover"
             />
-            <span className="text-sm font-semibold text-foreground group-hover:text-violet-400 transition-colors">
+            <span className="text-sm font-semibold text-foreground group-hover:text-amber-500 transition-colors">
               Khurshid Shaikh
             </span>
           </a>
@@ -77,7 +77,7 @@ const Navbar = () => {
                 <FaGithub size={18} />
               </a>
               <a
-                href="https://www.linkedin.com/in/khurshid-shaikh-41b348281/"
+                href="https://www.linkedin.com/in/khurshidshaikh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-lg transition-all"
@@ -169,7 +169,7 @@ const Navbar = () => {
                 <a href="https://github.com/KhurshidShaikh" target="_blank" rel="noopener noreferrer" className="p-2 text-muted-foreground hover:text-foreground transition-colors">
                   <FaGithub size={18} />
                 </a>
-                <a href="https://www.linkedin.com/in/khurshid-shaikh-41b348281/" target="_blank" rel="noopener noreferrer" className="p-2 text-muted-foreground hover:text-foreground transition-colors">
+                <a href="https://www.linkedin.com/in/khurshidshaikh" target="_blank" rel="noopener noreferrer" className="p-2 text-muted-foreground hover:text-foreground transition-colors">
                   <FaLinkedin size={18} />
                 </a>
                 <a href="https://x.com/__khurshid__7" target="_blank" rel="noopener noreferrer" className="p-2 text-muted-foreground hover:text-foreground transition-colors">
