@@ -78,7 +78,7 @@ export const projects=[
     description:"A comprehensive alumni networking platform built for college communities, featuring connections directory, job board, Events ,news feed, and alumni stories.",
     image:alumnibridge,
     source_code:"https://github.com/KhurshidShaikh/Alumni-Bridge",
-    live_link:"https://alumnibridge.giize.com",
+    live_link:"https://alumnibridge.vercel.app",
     tags: ["MERN", "REST API", "Auth"]
 },
 {
