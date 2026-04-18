@@ -94,7 +94,7 @@ export default function Home() {
                 </MovingBorderButton>
 
                 <a
-                  href="https://drive.google.com/file/d/1mfGrvP36obpdQdjwYJ2w2E0vWFiyRIp4/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1RNwXNy1L6_mZUcbtHZlq0M-2Ql3QYeln/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 h-12 px-6 rounded-full border-2 border-amber-500/60 text-sm font-medium text-foreground hover:border-amber-400 hover:bg-amber-500/10 hover:shadow-[0_0_20px_rgba(212,168,83,0.2)] transition-all duration-300"
